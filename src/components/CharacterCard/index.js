@@ -8,7 +8,7 @@ function FriendCard(props) {
         <img
           alt={props.name}
           src={props.image}
-          onClick={() => props.removeFriend(props.id)}
+          onClick={() => props.shuffleCharacter(props.id)}
           className="remove"
         />
       </div>
