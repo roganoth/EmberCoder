@@ -1,30 +1,61 @@
 import React, { Component } from "react";
-import FriendCard from "./components/CharacterCard";
+import CharacterCard from "./components/CharacterCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
-import friends from "./character.json";
+import characters from "./character.json";
 
 class App extends Component {
   state = {
-    friends
+    characters,
+    score: 0,
+    topScore: 10,
+    charactersClicked: [],
+    message: "Click to Play!"
   };
 
-  shuffleCharacters = id => {
-    this.setState({ clicked: true });
+  characterClicked = id => {
+    let charactersClicked = this.state.characterClicked;
+    if (charactersClicked.includes(id)) {
+      this.setState({
+        characterClicked: [],
+        score: 0,
+        message: "You Lost! Play Again!"
+      });
+      return;
+    } else {
+      charactersClicked.push(id);
+    }
+
+    if (charactersClicked.length === 10) {
+      this.setState({
+        score: 10,
+        message: "You Win! Click to Play again!",
+        charactersClicked: []
+      });
+      return;
+    }
+
+    this.setState({
+      score: charactersClicked.length,
+      message: "You got another one!"
+    });
+
+    for (let i = characters.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      [characters[i], (characters[j] = characters[j]), characters[i]];
+    }
   };
 
   render() {
     return (
       <Wrapper>
         <Title>Clicky Game</Title>
-        {this.state.friends.map(friend => (
-          <FriendCard
-            shuffleCharacters={this.shuffleCharacters}
-            id={friend.id}
-            key={friend.id}
-            name={friend.name}
-            image={friend.image}
-            clicked={false}
+        {this.state.characters.map(character => (
+          <CharacterCard
+            id={character.id}
+            key={character.id}
+            name={character.name}
+            image={character.image}
           />
         ))}
       </Wrapper>
