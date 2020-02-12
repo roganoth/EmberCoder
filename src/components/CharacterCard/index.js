@@ -1,19 +1,17 @@
 import React from "react";
 import "./style.css";
 
-function FriendCard(props) {
+function CharacterCard(props) {
   return (
     <div className="card">
-      <div className="img-container">
-        <img
-          alt={props.name}
-          src={props.image}
-          onClick={() => props.shuffleCharacter(props.id)}
-          className="remove"
-        />
+      <div
+        className="img-container"
+        onClick={() => props.characterClicked(props.id)}
+      >
+        <img alt={props.name} src={props.image} />
       </div>
     </div>
   );
 }
 
-export default FriendCard;
+export default CharacterCard;
