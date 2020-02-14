@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/EmberCoder/static/css/main.5362975d.chunk.css",
+    "main.js": "/EmberCoder/static/js/main.723af0aa.chunk.js",
+    "main.js.map": "/EmberCoder/static/js/main.723af0aa.chunk.js.map",
+    "runtime-main.js": "/EmberCoder/static/js/runtime-main.d8540102.js",
+    "runtime-main.js.map": "/EmberCoder/static/js/runtime-main.d8540102.js.map",
+    "static/js/2.2201ad36.chunk.js": "/EmberCoder/static/js/2.2201ad36.chunk.js",
+    "static/js/2.2201ad36.chunk.js.map": "/EmberCoder/static/js/2.2201ad36.chunk.js.map",
+    "index.html": "/EmberCoder/index.html",
+    "precache-manifest.db48c85da33aad211949ba621d8029e2.js": "/EmberCoder/precache-manifest.db48c85da33aad211949ba621d8029e2.js",
+    "service-worker.js": "/EmberCoder/service-worker.js",
+    "static/css/main.5362975d.chunk.css.map": "/EmberCoder/static/css/main.5362975d.chunk.css.map",
+    "static/js/2.2201ad36.chunk.js.LICENSE.txt": "/EmberCoder/static/js/2.2201ad36.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d8540102.js",
+    "static/js/2.2201ad36.chunk.js",
+    "static/css/main.5362975d.chunk.css",
+    "static/js/main.723af0aa.chunk.js"
+  ]
+}
