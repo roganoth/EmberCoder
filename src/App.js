@@ -15,10 +15,10 @@ class App extends Component {
   };
 
   characterClicked = id => {
-    let charactersChosen = this.state.characterClicked;
+    let charactersChosen = this.state.charactersChosen;
     if (charactersChosen.includes(id)) {
       this.setState({
-        characterChosen: [],
+        charactersChosen: [],
         score: 0,
         message: "You Lost! Play Again!"
       });
@@ -58,9 +58,9 @@ class App extends Component {
         />
         {this.state.characters.map(character => (
           <CharacterCard
+            characterClicked={this.characterClicked}
             id={character.id}
             key={character.id}
-            name={character.name}
             image={character.image}
           />
         ))}
